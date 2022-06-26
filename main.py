@@ -126,7 +126,7 @@ def getuserinfo(id):
  erynrequest=requests.get(eryn+id,headers={"user-agent":str(getuseragent()),"Upgrade":"TLS/1.2","Connection":"close"})
  erynrequest.close()
  if request.status_code==200:
-  print("Recieved response. \n")
+  print("Received response. \n")
   extract  = re.findall('<h5>(.*)</h5>',request.text)
   extractimage  = re.findall('<meta name="image" content="(.*)" />',request.text)[0]
   table = extract[0:5]
